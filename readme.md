@@ -6,6 +6,7 @@ A script to trigger a sensor in you homeassistant when your webcam becomes in us
 
 1. You have to buy a third party app in order to identify if your webcam is in use. There is other free applications that do a similar thing, but I've had the most consistent luck with https://obdev.at/microsnitch
 2. Install hassio-onair `npm install hassio-onair -g`
+3. Make sure you're using a version of node that's 12 or greater, check with `node --version`. There's a problem with earlier versions of node where it won't pick up on file changes correctly.
 
 ## Testing it works
 1. Create a long lived access token from the profile settings in home assistant.
