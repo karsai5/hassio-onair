@@ -1,19 +1,23 @@
+#!/usr/bin/env node
+
 const fs = require('fs')
 const readLastLines = require('read-last-lines')
 const axios = require('axios')
-const os = require('os')
 const program = require('commander')
 const path = require('path')
 
+const DEFAULT_LOG_FILE =
+  '~/Library/Containers/at.obdev.MicroSnitch/Data/Library/Logs/Micro Snitch.log'
+
 const start = () => {
   program
-    .requiredOption('-l, --logfile <logfile>')
+    .option('-l, --logfile <logfile>')
     .requiredOption('-h, --host <host>')
     .requiredOption('-k, --key <key>')
 
   program.parse(process.argv)
 
-  const filename = path.resolve(program.logfile)
+  const filename = path.resolve(program.logfile || DEFAULT_LOG_FILE)
 
   fs.watch(filename, event => {
     console.log('change occured!', event)
