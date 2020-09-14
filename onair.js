@@ -5,9 +5,11 @@ const readLastLines = require('read-last-lines')
 const axios = require('axios')
 const program = require('commander')
 const path = require('path')
+  const os = require('os');
 
 const DEFAULT_LOG_FILE =
-  '~/Library/Containers/at.obdev.MicroSnitch/Data/Library/Logs/Micro Snitch.log'
+  `${os.homedir()}/Library/Containers/at.obdev.MicroSnitch/Data/Library/Logs/Micro Snitch.log`
+
 
 const start = () => {
   program
