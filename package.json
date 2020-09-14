@@ -2,6 +2,7 @@
   "name": "hassio-onair",
   "version": "0.1.0",
   "main": "./onair.js",
+  "author": "Linus Kakrsai",
   "license": "MIT",
   "bin": {
     "onair": "./onair.js"
