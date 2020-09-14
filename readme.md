@@ -15,7 +15,7 @@ A script to trigger a sensor in you homeassistant when your webcam becomes in us
 4. Check that the `sensor.on_air` entity is updated in home assistant
 
 ## Creating a shortcut to make it easier to start
-4. Create an automater script to make it easier to start up
+1. Create an automater script to make it easier to start up
    1. Open Automator
    2. File -> New
    3. Type: Application
@@ -25,4 +25,4 @@ A script to trigger a sensor in you homeassistant when your webcam becomes in us
       onair -h <HOME_ASSISTANT_URL> -k <LONG_LIVED_ACCESS_TOKEN> >/dev/null 2>&1 &
       ```
    6. Save
-7. Start from applications folder (the app icon will immediately disappear, this is because the script runs in the brackground)
+2. Start from applications folder (the app icon will immediately disappear, this is because the script runs in the brackground)
